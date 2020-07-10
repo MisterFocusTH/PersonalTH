@@ -2,17 +2,17 @@ package com.sayamphoo.th_personal_id
 
 
 class Personal(private var idPersonal: Long) {
-    private var mPersonalIdTh: CheckPersonalIdTh? = null
+    private var mPersonalIdTh: setPersonalIdTH? = null
     private var mBase = 1000000000000L
     private var mMain = 0
     private var mSum = 0
 
     private fun personal() {
-            if (idPersonal.toString().length == 13) {
-                personalCheck()
-            } else {
-                mPersonalIdTh!!.errorPersona(java.lang.Exception())
-            }
+        if (idPersonal.toString().length == 13) {
+            personalCheck()
+        } else {
+            mPersonalIdTh!!.statusPersonal(false)
+        }
     }
 
     private fun personalCheck() {
@@ -33,8 +33,12 @@ class Personal(private var idPersonal: Long) {
         }
     }
 
-    fun checkPersonalIdThai(personalIdTh: CheckPersonalIdTh) {
+    fun checkPersonalIdTHai(personalIdTh: setPersonalIdTH) {
         mPersonalIdTh = personalIdTh
         personal()
+    }
+
+    interface setPersonalIdTH {
+        fun statusPersonal(status: Boolean)
     }
 }
