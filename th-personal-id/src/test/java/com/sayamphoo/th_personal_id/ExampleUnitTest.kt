@@ -15,9 +15,10 @@ class ExampleUnitTest {
         assertEquals(4, 2 + 2)
     }
 
-    @Test fun verifyThatNumberIsInValid() {
+    @Test
+    fun verifyThatNumberIsInValid() {
         var isValid: Boolean = false
-        THIDCardCheck("1234567891234").checkPersonalIdTHai(object : THIDCardCheck.SetOnVerificationStatus {
+        THIDCardCheck("1234567891234").checkPersonalID(object : THIDCardCheck.SetOnVerificationStatus {
             override fun onVerifiedStatusSuccess() {
                 isValid = true
             }
@@ -30,7 +31,7 @@ class ExampleUnitTest {
 
     @Test fun verifyThatNumberIsInValidTwo() {
         var isValid: Boolean = false
-        THIDCardCheck("381345983755").checkPersonalIdTHai(object : THIDCardCheck.SetOnVerificationStatus {
+        THIDCardCheck("381345983755").checkPersonalID(object : THIDCardCheck.SetOnVerificationStatus {
             override fun onVerifiedStatusSuccess() {
                 isValid = true
             }
@@ -43,7 +44,7 @@ class ExampleUnitTest {
 
     @Test fun verifyThatNumberIsValid() {
         var isValid: Boolean = false
-        THIDCardCheck("7659645159620").checkPersonalIdTHai(object : THIDCardCheck.SetOnVerificationStatus {
+        THIDCardCheck("7659645159620").checkPersonalID(object : THIDCardCheck.SetOnVerificationStatus {
             override fun onVerifiedStatusSuccess() {
                 isValid = true
             }

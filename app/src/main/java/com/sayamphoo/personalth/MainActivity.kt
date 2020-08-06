@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val mPersonal: String = "1234567890123"
 
 
-        THIDCardCheck(mPersonal).checkPersonalIdTHai(object : THIDCardCheck.SetOnVerificationStatus {
+        THIDCardCheck(mPersonal).checkPersonalID(object : THIDCardCheck.SetOnVerificationStatus {
 
             override fun onVerifiedStatusSuccess() {
                 TODO("Not yet implemented")

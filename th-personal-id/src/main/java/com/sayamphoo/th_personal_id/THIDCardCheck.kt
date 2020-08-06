@@ -9,7 +9,7 @@ class THIDCardCheck(private var identificationNumber: String) {
 
     private var IDNumber: Long = 0
 
-    private fun personal() {
+    private fun checkIdentificationNumber() {
         if (identificationNumber.length != 13 || identificationNumber.length < 13) {
             mIdentificationNumber?.onVerifiedStatusFailed()
         } else {
@@ -36,9 +36,9 @@ class THIDCardCheck(private var identificationNumber: String) {
         }
     }
 
-    fun checkPersonalIdTHai(cardIDCheck: SetOnVerificationStatus) {
+    fun checkPersonalID(cardIDCheck: SetOnVerificationStatus) {
         mIdentificationNumber = cardIDCheck
-        personal()
+        checkIdentificationNumber()
     }
 
     interface SetOnVerificationStatus {
